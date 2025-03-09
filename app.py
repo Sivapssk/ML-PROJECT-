@@ -7,7 +7,8 @@ import os
 app = Flask(__name__)
 
 # Load the trained model
-model_path = "C:/Users/SIVA/OneDrive/Desktop/ML PROJECT/best_loan_status_model.pkl"
+model_path = "best_loan_status_model.pkl"  # Assuming it's in the same directory as app.py
+
 
 # Check if the model file exists before loading
 if os.path.exists(model_path):
