@@ -11,12 +11,12 @@ model_path = "best_loan_status_model.pkl"  # Assuming it's in the same directory
 
 
 # Check if the model file exists before loading
-if os.path.exists(model_path):
+try:
     model = joblib.load(model_path)
     print("✅ Model loaded successfully!")
-else:
+except Exception as e:
     model = None
-    print("❌ Model not found at:", model_path)
+    print("❌ Error loading model:", e)
 
 # Define prediction function
 def predict_loan_status(data):
